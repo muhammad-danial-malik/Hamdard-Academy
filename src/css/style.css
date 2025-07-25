@@ -307,6 +307,129 @@ main {
     border: none;
 }
 
+/* What We Offer Section */
+.offerings {
+    background-color: var(--background-light);
+    padding: 4rem 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--tertiary);
+    text-align: center;
+    margin: 0 0 1rem 0;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.title-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    width: 60px;
+    border-radius: 1px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+    text-align: center;
+    margin: 0 0 3rem 0;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.offering-item {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--gray-light);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.offering-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.offering-item .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(225, 6, 0, 0.08);
+    border-radius: 50%;
+    margin: 0 auto;
+    color: var(--primary);
+}
+
+.offering-item .icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.offering-item h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--tertiary);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.offering-item p {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.cta-btn {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.2px;
+    transition: all 0.2s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.cta-btn:hover {
+    background-color: #C20500;
+    transform: translateY(-1px);
+}
+
 /* Mobile and Tablet Responsive Design */
 @media screen and (max-width: 768px) {
     .nav-container {
@@ -459,6 +582,65 @@ main {
     .hero-img {
         max-width: 320px;
     }
+
+    /* Offerings Mobile Styles */
+    .offerings {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+        gap: 0.5rem;
+    }
+
+    .title-line {
+        width: 40px;
+        height: 1.5px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .offerings-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .offering-item {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .offering-item .icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .offering-item .icon svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .offering-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .offering-item p {
+        font-size: 0.95rem;
+    }
+
+    .cta-btn {
+        padding: 0.75rem 1.8rem;
+        font-size: 0.85rem;
+    }
 }
 
 /* Tablet specific adjustments */
@@ -519,6 +701,44 @@ main {
 
     .hero-img {
         max-width: 420px;
+    }
+
+    /* Offerings Large Tablet Styles */
+    .offerings {
+        padding: 3.5rem 0;
+    }
+
+    .section-title {
+        font-size: 2.3rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 2.75rem;
+    }
+
+    .offerings-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2.75rem;
+    }
+
+    .offering-item {
+        padding: 1.85rem;
+        gap: 1.15rem;
+    }
+
+    .offering-item h3 {
+        font-size: 1.35rem;
+    }
+
+    .offering-item p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -584,6 +804,48 @@ main {
     .hero-img {
         max-width: 380px;
     }
+
+    /* Offerings Medium Tablet Styles */
+    .offerings {
+        padding: 3.5rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .offerings-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.75rem;
+        margin-top: 2.5rem;
+    }
+
+    .offering-item {
+        padding: 1.75rem;
+        gap: 1.1rem;
+    }
+
+    .offering-item h3 {
+        font-size: 1.35rem;
+    }
+
+    .offering-item p {
+        font-size: 0.98rem;
+    }
+
+    .cta-btn {
+        padding: 0.75rem 1.9rem;
+        font-size: 0.87rem;
+    }
 }
 
 /* Large screen optimizations */
@@ -640,5 +902,57 @@ main {
 
     .hero-img {
         max-width: 520px;
+    }
+
+    /* Offerings Large Screen Styles */
+    .offerings {
+        padding: 4.5rem 0;
+    }
+
+    .container {
+        padding: 0 3rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .offerings-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+        margin-top: 3.5rem;
+    }
+
+    .offering-item {
+        padding: 2.25rem;
+        gap: 1.4rem;
+    }
+
+    .offering-item .icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .offering-item .icon svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .offering-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .offering-item p {
+        font-size: 1.05rem;
+    }
+
+    .cta-btn {
+        padding: 0.9rem 2.2rem;
+        font-size: 0.95rem;
     }
 }
