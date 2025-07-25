@@ -91,4 +91,28 @@ document.addEventListener("DOMContentLoaded", function () {
       updateButtonStates();
     });
   }
+
+  // FAQ Accordion Functionality
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", function () {
+      const isCurrentlyActive = item.classList.contains("active");
+
+      // Close all FAQ items
+      faqItems.forEach((faqItem) => {
+        faqItem.classList.remove("active");
+        const faqQuestion = faqItem.querySelector(".faq-question");
+        faqQuestion.setAttribute("aria-expanded", "false");
+      });
+
+      // If the clicked item wasn't active, open it
+      if (!isCurrentlyActive) {
+        item.classList.add("active");
+        question.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
 });
