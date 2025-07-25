@@ -1,8 +1,406 @@
+/* ===============================================
+   BROWSER COMPATIBILITY & CROSS-BROWSER FIXES
+   =============================================== */
+
+/* Reset and normalize for all browsers */
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+/* Critical CSS for initial load - Browser compatibility */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #111111;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox fallbacks */
+.nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* Grid fallbacks */
+@supports not (display: grid) {
+
+    .offerings-grid,
+    .features-grid,
+    .stats-grid {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+/* CSS Custom Properties fallback */
+:root {
+    --primary: #E10600;
+    --secondary: #00C851;
+    --tertiary: #111111;
+    --accent-gold: #D1A766;
+    --background-light: #F9F9F9;
+    --text-dark: #2E2E2E;
+    --text-light: #FFFFFF;
+}
+
+/* Fallback colors for older browsers */
+.hero-btn {
+    background-color: #E10600;
+    /* Fallback */
+    background-color: var(--primary);
+}
+
+/* Transform prefixes */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    -ms-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Transition prefixes */
+.nav-link {
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+/* Border radius prefixes for older versions */
+.logo {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Remove default styling inconsistencies */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+/* HTML5 element display fixes for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/* IE6/7 specific hacks removed for modern browser support */
+
+/* Hidden attribute fix for older browsers */
+[hidden] {
+    display: none;
+}
+
+/* SVG fallback for IE */
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Button and input reset for cross-browser consistency */
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+/* Fix for clickable elements in iOS */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    appearance: button;
+    cursor: pointer;
+}
+
+/* Remove inner border and padding in Firefox */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Address Firefox 4+ setting `line-height` on `input` using `!important` */
+input {
+    line-height: normal;
+}
+
+/* Remove default border radius on iOS inputs */
+input[type="search"] {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+/* Remove cancel button on search inputs in Safari */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/* Improve readability of focused elements */
+:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+/* Browser-specific font smoothing */
+body,
+input,
+textarea,
+select,
+button {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Remove tap highlight on mobile browsers */
+a,
+button,
+input,
+textarea,
+select {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* Prevent horizontal scrolling on smaller screens */
+html {
+    overflow-x: hidden;
+}
+
+/* Scroll behavior for smooth scrolling (with fallback) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fallback for browsers that don't support scroll-behavior */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* CSS Grid fallback using Flexbox */
+@supports not (display: grid) {
+
+    .offerings-grid,
+    .features-grid,
+    .stats-grid {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .offering-item,
+    .feature-item,
+    .stat-card {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 300px;
+        flex: 1 1 300px;
+        max-width: 400px;
+    }
+}
+
+/* Flexbox prefixes for older browsers */
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* Transform prefixes */
+.transform {
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Transition prefixes */
+.transition {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Border radius prefixes */
+.rounded {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Box shadow prefixes */
+.shadow {
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS Custom Properties fallback */
+.no-css-variables body {
+    color: #2E2E2E;
+    background-color: #F9F9F9;
+}
+
+.no-css-variables .navbar {
+    background-color: #111111;
+}
+
+.no-css-variables .hero-btn {
+    background-color: #E10600;
+}
+
+.no-css-variables .social-link:hover svg {
+    color: #D1A766;
+}
+
+/* Internet Explorer specific fixes */
+.ie .nav-menu {
+    background-color: #111111;
+}
+
+.ie .hamburger {
+    cursor: pointer;
+}
+
+/* Firefox specific fixes */
+.firefox button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Safari specific fixes */
+.safari input[type="search"] {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Edge specific fixes */
+.edge svg {
+    pointer-events: none;
+}
+
+/* Mobile-specific optimizations */
+.mobile body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+.mobile .nav-menu {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* High DPI/Retina display optimizations */
+.retina img {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Print styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    .navbar,
+    .hamburger,
+    .footer-social {
+        display: none !important;
+    }
+}
+
+/* ===============================================
+   END BROWSER COMPATIBILITY SECTION
+   =============================================== */
 
 :root {
     /* Brand Colors */
@@ -2352,6 +2750,7 @@ main {
         text-align: left;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
     }
 
     .footer-nav-title {
@@ -2378,6 +2777,7 @@ main {
     /* Contact Section - Row 3 */
     .footer-contact {
         text-align: left;
+        padding-top: 1.5rem;
         padding-bottom: 0;
     }
 
