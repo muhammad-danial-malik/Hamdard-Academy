@@ -2308,19 +2308,20 @@ main {
 
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 2rem;
         text-align: left;
     }
 
+    /* Brand Section - Row 1 */
     .footer-brand {
+        text-align: left;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding-bottom: 2rem;
-        text-align: center;
+        padding-bottom: 1.5rem;
     }
 
     .footer-logo {
-        margin-bottom: 1.25rem;
-        justify-content: center;
+        justify-content: flex-start;
+        margin-bottom: 1rem;
     }
 
     .footer-logo-img {
@@ -2337,61 +2338,75 @@ main {
     }
 
     .footer-social {
-        gap: 1.25rem;
-        justify-content: center;
+        justify-content: flex-start;
+        gap: 1rem;
     }
 
     .social-link {
-        width: 42px;
-        height: 42px;
+        width: 38px;
+        height: 38px;
     }
 
-    /* Two-column layout for nav and contact on mobile */
-    .footer-nav-contact-wrapper {
+    /* Navigation Section - Row 2 */
+    .footer-nav {
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 1.5rem;
+    }
+
+    .footer-nav-title {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-nav-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        margin-top: 1rem;
-    }
-
-    .footer-nav,
-    .footer-contact {
-        padding: 0;
-        text-align: left;
-    }
-
-    .footer-nav-title,
-    .footer-contact-title {
-        font-size: 1.1rem;
-        margin-bottom: 1.25rem;
+        gap: 0.5rem 1rem;
     }
 
     .footer-nav-list li {
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.5rem;
     }
 
     .footer-nav-link {
         font-size: 0.9rem;
+        display: block;
         padding: 0.25rem 0;
-        display: inline-block;
+    }
+
+    /* Contact Section - Row 3 */
+    .footer-contact {
+        text-align: left;
+        padding-bottom: 0;
+    }
+
+    .footer-contact-title {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
     }
 
     .footer-contact-item {
-        margin-bottom: 1rem;
-        font-size: 0.9rem;
         justify-content: flex-start;
+        margin-bottom: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .contact-icon {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Remove wrapper grid on mobile */
+    .footer-nav-contact-wrapper {
+        display: block;
     }
 
     .footer-bottom {
         padding-top: 1.5rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.5rem;
         text-align: center;
     }
 
