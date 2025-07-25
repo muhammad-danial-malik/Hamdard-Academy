@@ -229,7 +229,7 @@ main {
 .hero-content {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.00rem;
 }
 
 .hero-badge {
@@ -432,6 +432,10 @@ main {
 
     .hero-badge {
         margin-bottom: 0.25rem;
+        align-self: center;
+        width: auto;
+        display: flex;
+        justify-content: center;
     }
 
     .hero-title {
@@ -458,7 +462,7 @@ main {
 }
 
 /* Tablet specific adjustments */
-@media screen and (max-width: 1024px) and (min-width: 769px) {
+@media screen and (max-width: 1024px) and (min-width: 900px) {
     .nav-container {
         padding: 0 2rem;
         max-width: 100%;
@@ -515,6 +519,70 @@ main {
 
     .hero-img {
         max-width: 420px;
+    }
+}
+
+/* Medium tablet adjustments (problematic range) */
+@media screen and (max-width: 899px) and (min-width: 769px) {
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-logo {
+        gap: 0.75rem;
+    }
+
+    .academy-name {
+        font-size: 1.2rem;
+    }
+
+    .academy-tagline {
+        font-size: 0.65rem;
+    }
+
+    .nav-menu {
+        gap: 0.15rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .enroll-btn {
+        padding: 0.5rem 1.2rem;
+        margin-left: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    /* Hero adjustments for medium tablet */
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .hero-container {
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .hero-btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.85rem;
+    }
+
+    .hero-img {
+        max-width: 380px;
     }
 }
 
