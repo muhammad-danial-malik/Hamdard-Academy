@@ -31,7 +31,6 @@ Thumbs.db
 .npm/
 
 # Editor directories and files
-.vscode/
 .idea/
 *.suo
 *.ntvs*
@@ -52,3 +51,4 @@ coverage/
 
 # Ignore temp files
 temp.*
+.gitignore
