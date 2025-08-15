@@ -43,7 +43,7 @@ hamdarrd-academy/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/muhammad-danial-malik/hamdarrd-academy.git
+   git clone https://github.com/muhammad-danial-malik/hamdard-academy.git
    cd hamdarrd-academy
    ```
 
