@@ -1,7 +1,6 @@
 {
   "buildCommand": "",
   "framework": "static",
-  "public": "./",
   "cleanUrls": false,
   "headers": [
     {
