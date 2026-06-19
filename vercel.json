@@ -1,7 +1,5 @@
 {
-  "buildCommand": "",
-  "framework": "static",
-  "cleanUrls": false,
+  "cleanUrls": true,
   "headers": [
     {
       "source": "/(.*)",
