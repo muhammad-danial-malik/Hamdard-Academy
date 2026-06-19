@@ -10,7 +10,7 @@
 - Animated sections using JavaScript for enhanced interactivity
 - Optimized image and content layout for fast performance
 - Modular folder structure for maintainable development
-- Easy customization and scalability
+- Easy customization and scalability  
 
 ---
 
@@ -43,7 +43,7 @@ hamdarrd-academy/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/muhammad-danial-malik/hamdard-academy.git
+   git clone https://github.com/muhammad-danial-malik/hamdarrd-academy.git
    cd hamdarrd-academy
    ```
 
