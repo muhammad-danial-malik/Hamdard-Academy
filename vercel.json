@@ -1,14 +1,8 @@
 {
   "cleanUrls": true,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
-      ]
-    }
+  "rewrites": [
+    { "source": "/about-us", "destination": "/src/pages/about-us.html" },
+    { "source": "/contact-us", "destination": "/src/pages/contact-us.html" },
+    { "source": "/schedules", "destination": "/src/pages/schedules.html" }
   ]
 }
