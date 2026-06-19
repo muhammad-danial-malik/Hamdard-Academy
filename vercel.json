@@ -1,8 +1,9 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/about-us", "destination": "/src/pages/about-us.html" },
-    { "source": "/contact-us", "destination": "/src/pages/contact-us.html" },
-    { "source": "/schedules", "destination": "/src/pages/schedules.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
