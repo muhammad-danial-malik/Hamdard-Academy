@@ -1,0 +1,170 @@
+/* ===============================================
+   CONTACT PAGE - PAGE HEADER
+   =============================================== */
+
+.page-header {
+    background-color: white;
+    padding: 3rem 0 1rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.page-header .section-title {
+    margin-bottom: 0.75rem;
+}
+
+.link-accent {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link-accent:hover {
+    text-decoration: underline;
+}
+
+/* ===============================================
+   CONTACT FORM SECTION
+   =============================================== */
+
+.contact-form-section {
+    padding: 1rem 0 4rem;
+    background-color: white;
+}
+
+.contact-form-card {
+    max-width: 700px;
+    margin: 2rem auto 0;
+    background-color: var(--background-light);
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--tertiary);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 5px;
+    background-color: white;
+    color: var(--text-dark);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(225, 6, 0, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-submit-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.form-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+    text-align: center;
+}
+
+/* ===============================================
+   MAP / LOCATION SECTION
+   =============================================== */
+
+.map-section {
+    padding: 0;
+    border-top: 1px solid var(--gray-light);
+}
+
+.map-frame {
+    width: 100%;
+    height: 350px;
+    border: none;
+    display: block;
+}
+
+/* ===============================================
+   MOBILE RESPONSIVE STYLES
+   =============================================== */
+
+@media (max-width: 767px) {
+    .page-header {
+        padding: 2.5rem 0 0.5rem;
+    }
+
+    .contact-form-section {
+        padding: 0.5rem 0 3rem;
+    }
+
+    .contact-form-card {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        border-radius: 6px;
+    }
+
+    .contact-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .map-frame {
+        height: 260px;
+    }
+}
+
+/* ===============================================
+   TABLET RESPONSIVE STYLES
+   =============================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contact-form-card {
+        padding: 2rem;
+    }
+}
+
+/* ===============================================
+   LARGE SCREEN STYLES
+   =============================================== */
+
+@media (min-width: 1400px) {
+    .contact-form-card {
+        max-width: 780px;
+        padding: 3rem;
+    }
+
+    .map-frame {
+        height: 420px;
+    }
+}
