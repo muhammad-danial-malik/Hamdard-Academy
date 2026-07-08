@@ -115,31 +115,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  // Contact Form Submission (mailto)
-  const contactForm = document.getElementById("contactForm");
-
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const fullName = contactForm.fullName.value.trim();
-      const phone = contactForm.phone.value.trim();
-      const classGroup = contactForm.classGroup.value;
-      const message = contactForm.message.value.trim();
-
-      const subject = `Enquiry from ${fullName} - ${classGroup}`;
-      const body =
-        `Name: ${fullName}\n` +
-        `Phone: ${phone}\n` +
-        `Class/Group: ${classGroup}\n\n` +
-        `Message:\n${message}`;
-
-      const mailtoLink = `mailto:info@hamdardacademy.com?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(body)}`;
-
-      window.location.href = mailtoLink;
-    });
-  }
 });
