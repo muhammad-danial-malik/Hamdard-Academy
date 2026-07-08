@@ -1,0 +1,213 @@
+/* ===============================================
+   SCHEDULES PAGE - PAGE HEADER
+   =============================================== */
+
+.page-header {
+    background-color: white;
+    padding: 3rem 0 1rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.page-header .section-title {
+    margin-bottom: 0.75rem;
+}
+
+.page-header .section-description {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-header-badge {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+/* ===============================================
+   CLASS TIMINGS TABLE
+   =============================================== */
+
+.timings-section {
+    padding: 4rem 0;
+    background-color: var(--background-light);
+    border-top: 1px solid var(--gray-light);
+}
+
+.schedule-table-wrapper {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--gray-light);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table thead th {
+    background-color: var(--tertiary);
+    color: var(--text-light);
+    text-align: left;
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.schedule-table tbody td {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.schedule-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: var(--background-light);
+}
+
+.schedule-table td.class-name {
+    font-weight: 600;
+    color: var(--tertiary);
+}
+
+.schedule-note {
+    text-align: center;
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+}
+
+/* ===============================================
+   SUBJECT LISTS (SCIENCE / ARTS GROUPS)
+   =============================================== */
+
+.subject-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.subject-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0;
+    font-size: 0.98rem;
+    color: var(--gray-dark);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.subject-list li:last-child {
+    border-bottom: none;
+}
+
+.subject-list li svg {
+    flex-shrink: 0;
+    color: var(--secondary);
+}
+
+/* ===============================================
+   MOBILE RESPONSIVE STYLES
+   =============================================== */
+
+@media (max-width: 767px) {
+    .page-header {
+        padding: 2.5rem 0 0.5rem;
+    }
+
+    .timings-section {
+        padding: 3rem 0;
+    }
+
+    /* Responsive table -> stacked cards */
+    .schedule-table-wrapper {
+        background: none;
+        box-shadow: none;
+        border: none;
+        margin-top: 1.5rem;
+    }
+
+    .schedule-table thead {
+        display: none;
+    }
+
+    .schedule-table,
+    .schedule-table tbody,
+    .schedule-table tr,
+    .schedule-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .schedule-table tr {
+        background-color: white;
+        border: 1px solid var(--gray-light);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+    }
+
+    .schedule-table tbody tr:nth-child(even) {
+        background-color: white;
+    }
+
+    .schedule-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.85rem 1.25rem;
+        border-bottom: 1px solid var(--gray-light);
+        text-align: right;
+    }
+
+    .schedule-table tr td:last-child {
+        border-bottom: none;
+    }
+
+    .schedule-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--tertiary);
+        text-align: left;
+    }
+
+    .schedule-table td.class-name {
+        background-color: var(--primary);
+        color: var(--text-light);
+        justify-content: center;
+        font-size: 1.05rem;
+    }
+
+    .schedule-table td.class-name::before {
+        content: none;
+    }
+}
+
+/* ===============================================
+   LARGE SCREEN STYLES
+   =============================================== */
+
+@media (min-width: 1400px) {
+    .schedule-table-wrapper {
+        max-width: 1000px;
+    }
+
+    .schedule-table thead th,
+    .schedule-table tbody td {
+        padding: 1.25rem 2rem;
+        font-size: 1.02rem;
+    }
+}
