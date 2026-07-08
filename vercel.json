@@ -3,19 +3,15 @@
   "rewrites": [
     {
       "source": "/about",
-      "destination": "/src/pages/about-us.html"
+      "destination": "/src/pages/about-us"
     },
     {
       "source": "/contact",
-      "destination": "/src/pages/contact-us.html"
+      "destination": "/src/pages/contact-us"
     },
     {
       "source": "/schedules",
-      "destination": "/src/pages/schedules.html"
-    },
-    {
-      "source": "/",
-      "destination": "/index.html"
+      "destination": "/src/pages/schedules"
     }
   ]
 }
