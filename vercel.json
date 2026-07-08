@@ -12,6 +12,10 @@
     {
       "source": "/schedules",
       "destination": "/src/pages/schedules.html"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
     }
   ]
 }
