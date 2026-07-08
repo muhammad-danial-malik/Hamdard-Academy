@@ -165,12 +165,9 @@
     }
 
     .schedule-table td {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.85rem 1.25rem;
+        padding: 0.7rem 1.25rem;
         border-bottom: 1px solid var(--gray-light);
-        text-align: right;
+        text-align: left;
     }
 
     .schedule-table tr td:last-child {
@@ -179,15 +176,19 @@
 
     .schedule-table td::before {
         content: attr(data-label);
+        display: block;
+        font-size: 0.75rem;
         font-weight: 600;
-        color: var(--tertiary);
-        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        color: var(--primary);
+        margin-bottom: 0.2rem;
     }
 
     .schedule-table td.class-name {
         background-color: var(--primary);
         color: var(--text-light);
-        justify-content: center;
+        text-align: center;
         font-size: 1.05rem;
     }
 
